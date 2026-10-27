@@ -1,0 +1,103 @@
+:root {
+  --bg: #fafafa;
+  --text: #1a1a1a;
+  --muted: #666;
+  --accent: #2b59c3;
+  --border: #e5e5e5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --text: #eee;
+    --muted: #9a9a9a;
+    --accent: #7aa2ff;
+    --border: #2a2a2a;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  border-bottom: 1px solid var(--border);
+}
+
+nav {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.logo { font-weight: 700; text-decoration: none; color: var(--text); }
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+
+nav a { color: var(--muted); text-decoration: none; }
+nav a:hover, nav a.active { color: var(--accent); }
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px;
+}
+
+h1 { font-size: 2rem; margin-bottom: 12px; }
+h2 { font-size: 1.15rem; margin-bottom: 6px; }
+p { margin-bottom: 16px; color: var(--muted); }
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.card p { margin-bottom: 0; }
+
+form { display: flex; flex-direction: column; gap: 14px; }
+
+label { display: flex; flex-direction: column; gap: 4px; font-size: 0.9rem; }
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+}
+
+form .btn { align-self: flex-start; }
+
+footer {
+    margin-top: 30px;
+  text-align: center;
+  padding: 24px 20px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
